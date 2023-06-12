@@ -1,0 +1,100 @@
+
+body{
+    background-color: lightblue;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .pantalla {
+    width: 200px;
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .teclas {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+    "botonC numero7 numero8 numero9 operadorDiv"
+    "botonC numero4 numero5 numero6 operadorMul"
+    "botonC numero1 numero2 numero3 operadorRes"
+    "botonC numero0 botonPunto botonIgual operadorSum";
+  }
+
+  .botonNumero0 {
+    grid-area: numero0;
+  }
+
+  .botonNumero1 {
+    grid-area: numero1;
+  }
+  
+  .botonNumero2 {
+    grid-area: numero2;
+  }
+  
+  .botonNumero3 {
+    grid-area: numero3;
+  }
+  
+  .botonNumero4 {
+    grid-area: numero4;
+  }
+  
+  .botonNumero5 {
+    grid-area: numero5;
+  }
+  
+  .botonNumero6 {
+    grid-area: numero6;
+  }
+
+  .botonNumero7 {
+    grid-area: numero7;
+  }
+  
+  .botonNumero8 {
+    grid-area: numero8;
+  }
+
+  .botonNumero9 {
+    grid-area: numero9;
+  }
+
+  .botonC {
+    grid-area: botonC;
+  }
+
+  .botonIgual {
+    grid-area: botonIgual;
+  }
+
+  .botonPunto {
+    grid-area: botonPunto;
+  }
+
+  .operadorDiv {
+    grid-area: operadorDiv;
+  }
+  
+  .operadorMul {
+    grid-area: operadorMul;
+  }
+  
+  .operadorRes {
+    grid-area: operadorRes;
+  }
+  
+  .operadorSum {
+    grid-area: operadorSum;
+  }
+  
+  
+  

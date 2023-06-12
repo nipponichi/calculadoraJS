@@ -4,32 +4,76 @@ body{
 }
 
 .contenedor {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-  }
-  
-  .pantalla {
-    width: 200px;
-    height: 40px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   }
 
+  .bloque{
+    background-color: white;  
+    padding: 60px 10px 5px;
+    border-radius: 10px;
+  }
+
+  .pantalla {
+    background-color: black;
+    box-shadow: inset 0px 0px 0px 2px white;
+    border: 8px solid black;
+    color:greenyellow;
+    border-radius: 5px;
+    width: 350px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
   .teclas {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(4, 1fr);
     grid-template-areas:
-    "botonC numero7 numero8 numero9 operadorDiv"
-    "botonC numero4 numero5 numero6 operadorMul"
-    "botonC numero1 numero2 numero3 operadorRes"
+    "hueco numero7 numero8 numero9 operadorDiv"
+    "hueco numero4 numero5 numero6 operadorMul"
+    "hueco numero1 numero2 numero3 operadorRes"
     "botonC numero0 botonPunto botonIgual operadorSum";
   }
 
-  .botonNumero0 {
-    grid-area: numero0;
+  .botonNumero0,
+  .botonNumero1,
+  .botonNumero2,
+  .botonNumero3,
+  .botonNumero4,
+  .botonNumero5,
+  .botonNumero6,
+  .botonNumero7,
+  .botonNumero8,
+  .botonNumero9,
+  .botonPunto {
+    border-radius: 5px;
+    background-color:black;
+    font-weight: 900;
+    color:white;
+    width: 65px;
+    height: 50px;
+    margin: 5px;  
+  }
+  .botonNumero0{
+  grid-area: numero0;
+  }
+
+  .botonNumero0:hover,
+  .botonNumero1:hover,
+  .botonNumero2:hover,
+  .botonNumero3:hover,
+  .botonNumero4:hover,
+  .botonNumero5:hover,
+  .botonNumero6:hover,
+  .botonNumero7:hover,
+  .botonNumero8:hover,
+  .botonNumero9:hover,
+  .botonPunto:hover{
+    background-color: rgb(68, 68, 68);
   }
 
   .botonNumero1 {
@@ -69,10 +113,43 @@ body{
   }
 
   .botonC {
+    border-radius: 5px;
+    background-color:red;
+    font-weight: 900;
+    color:white;
+    width: 65px;
+    height: 50px;
+    margin: 5px;
     grid-area: botonC;
   }
 
+  .botonC:hover{
+    background-color:rgb(252, 138, 138);
+  }
+
+  .operadorSum,
+  .operadorRes,
+  .operadorMul,
+  .operadorDiv,
   .botonIgual {
+    border-radius: 5px;
+    background-color:rgb(101, 152, 174);
+    font-weight: 900;
+    color:white;
+    width: 65px;
+    height: 50px;
+    margin: 5px;
+  }
+
+  .operadorSum:hover,
+  .operadorRes:hover,
+  .operadorMul:hover,
+  .operadorDiv:hover,
+  .botonIgual:hover {
+    background-color:rgb(140, 186, 206);
+  }
+
+  .botonIgual{
     grid-area: botonIgual;
   }
 
@@ -92,9 +169,13 @@ body{
     grid-area: operadorRes;
   }
   
-  .operadorSum {
+  .operadorSum {  
     grid-area: operadorSum;
   }
+
+
+
+  
   
   
   

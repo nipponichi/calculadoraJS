@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="calculadora.css">
+    <script src="calculadora.js"></script>
     <title>Calculadora</title>
 </head>
 <body>
@@ -13,10 +14,10 @@
             <div class="bloqueCasio">
                 <p class="logoCasio">Casio</p>
             </div>
-            <input type="text" class="pantalla"/>
+            <input type="text" id="pantalla" class="pantalla"/>
             <div class="teclas">
                 <!--Teclado numérico-->
-                <input type="button" value="7" class="botonNumero7"/>
+                <input type="button" value="7" class="botonNumero7" onclick="motrarTecla(value)"/>
                 <input type="button" value="4" class="botonNumero4"/>
                 <input type="button" value="6" class="botonNumero6"/>
                 <input type="button" value="0" class="botonNumero0"/>

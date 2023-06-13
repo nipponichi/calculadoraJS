@@ -1,4 +1,9 @@
 
+@font-face {
+  font-family: 'digital-7';
+  src: url('fonts/digital-7.ttf') format('truetype');
+}
+
 body{
     background-color: lightblue;
 }
@@ -17,7 +22,9 @@ body{
     border-radius: 10px;
   }
 
-  .pantalla {
+  .pantalla { 
+    font-family: 'digital-7', sans-serif;
+    font-size: 50px;
     background-color: black;
     box-shadow: inset 0px 0px 0px 2px white;
     border: 8px solid black;
@@ -26,6 +33,7 @@ body{
     width: 350px;
     height: 60px;
     margin-bottom: 10px;
+    direction: rtl;
   }
   
   .teclas {

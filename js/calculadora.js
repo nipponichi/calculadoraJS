@@ -29,10 +29,18 @@ function mostrarSigno(valor) {
       pantalla.value += ` ${valor} `;
       valores.push(valor);
     }
-  }
+}
+
+//Mensaje alert si no introducimos valores y clickamos '='
+function verificarValores() {
+    if (valores.length == 0) {
+      alert("Inserta valores");
+    }
+}
   
 //Hace la operación y muestra el resultado por pantalla
 function calcularResultado(){
+    verificarValores();
     let resultado;
     valoresEspacio = pantalla.value.split(' ');
     valores.push(valoresEspacio[2])

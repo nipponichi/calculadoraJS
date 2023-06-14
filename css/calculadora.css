@@ -1,27 +1,30 @@
-
+/*Fuente pantalla*/
 @font-face {
   font-family: 'digital-7';
-  src: url('fonts/digital-7.ttf') format('truetype');
+  src: url('/fonts/digital-7.ttf') format('truetype');
 }
 
-body{
+/*Background general*/
+body {
     background-color: lightblue;
 }
 
+/*Estructura principal*/
 .contenedor {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   }
 
+  /*Fondo blanco calculadora*/
   .bloque{
     background-color: white;  
     padding: 60px 10px 5px;
     border-radius: 10px;
   }
 
+  /*Pantalla calculadora*/
   .pantalla { 
     font-family: 'digital-7', sans-serif;
     font-size: 50px;
@@ -36,6 +39,7 @@ body{
     /*direction: rtl;*/
   }
   
+  /*Estructura teclado calculadora*/
   .teclas {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -47,6 +51,7 @@ body{
     "botonC numero0 botonPunto botonIgual operadorSum";
   }
 
+  /*Diseño números*/
   .botonNumero0,
   .botonNumero1,
   .botonNumero2,
@@ -66,10 +71,8 @@ body{
     height: 50px;
     margin: 5px;  
   }
-  .botonNumero0{
-  grid-area: numero0;
-  }
 
+  /*Funcion hover numeros*/
   .botonNumero0:hover,
   .botonNumero1:hover,
   .botonNumero2:hover,
@@ -83,6 +86,11 @@ body{
   .botonPunto:hover{
     background-color: rgb(68, 68, 68);
   }
+
+  /*Designación posición botones en grid*/
+  .botonNumero0{
+    grid-area: numero0;
+    }
 
   .botonNumero1 {
     grid-area: numero1;
@@ -120,43 +128,6 @@ body{
     grid-area: numero9;
   }
 
-  .botonC {
-    border-radius: 5px;
-    background-color:red;
-    font-weight: 900;
-    color:white;
-    width: 65px;
-    height: 50px;
-    margin: 5px;
-    grid-area: botonC;
-  }
-
-  .botonC:hover{
-    background-color:rgb(252, 138, 138);
-  }
-
-  .operadorSum,
-  .operadorRes,
-  .operadorMul,
-  .operadorDiv,
-  .botonIgual {
-    border-radius: 5px;
-    background-color:rgb(101, 152, 174);
-    font-weight: 900;
-    color:white;
-    width: 65px;
-    height: 50px;
-    margin: 5px;
-  }
-
-  .operadorSum:hover,
-  .operadorRes:hover,
-  .operadorMul:hover,
-  .operadorDiv:hover,
-  .botonIgual:hover {
-    background-color:rgb(140, 186, 206);
-  }
-
   .botonIgual{
     grid-area: botonIgual;
   }
@@ -181,11 +152,54 @@ body{
     grid-area: operadorSum;
   }
 
+  /*Diseño boton C*/
+  .botonC {
+    border-radius: 5px;
+    background-color:red;
+    font-weight: 900;
+    color:white;
+    width: 65px;
+    height: 50px;
+    margin: 5px;
+    grid-area: botonC;
+  }
+
+  /*Hover boton C*/
+  .botonC:hover{
+    background-color:rgb(252, 138, 138);
+  }
+
+  /*Diseño operadores*/
+  .operadorSum,
+  .operadorRes,
+  .operadorMul,
+  .operadorDiv,
+  .botonIgual {
+    border-radius: 5px;
+    background-color:rgb(101, 152, 174);
+    font-weight: 900;
+    color:white;
+    width: 65px;
+    height: 50px;
+    margin: 5px;
+  }
+
+  /*Hover operadores*/
+  .operadorSum:hover,
+  .operadorRes:hover,
+  .operadorMul:hover,
+  .operadorDiv:hover,
+  .botonIgual:hover {
+    background-color:rgb(140, 186, 206);
+  }
+
+  /*Linea negra logo*/
   .bloqueCasio{
     background-color: black;
     border-radius: 5px;
   } 
 
+  /*Diseño logo*/
   .logoCasio {
     padding-left: 40px;
     font-family: sans-serif;

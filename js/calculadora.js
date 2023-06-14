@@ -4,14 +4,13 @@ let valores = [];
 //Constante declarando pantalla y donde identificarla
 const pantalla = document.getElementById("pantalla");
 
-//Intento de añadir valor de tecla a pantalla
+//Añade valor de tecla a pantalla
 function mostrarTecla (valor){
     pantalla.value += valor;
 }
 
 //Modifica el valor en pantalla a caracter vacío
 function limpiarPantalla(){
-    console.log("limpiarPantalla")
     pantalla.value = '';
 }
 
@@ -20,13 +19,13 @@ function limpiarValores(valor){
     valores.splice(0,3);
     pantalla.value = valor;
 }
+
 //Muestra la operacion seleccionada
 function mostrarSigno(valor) {
     // Si el array de valores es menor o igual a una posición
     // permite seleccionar un símbolo
     if (valores.length <= 1) {
-      /*valoresEspacio =*/ pantalla.value.split(' ');
-      valores.push(parseFloat(pantalla.value));
+      valores.push(parseFloat(pantalla.value.split(' ')));
       pantalla.value += ` ${valor} `;
       valores.push(valor);
     }
@@ -37,22 +36,25 @@ function calcularResultado(){
     let resultado;
     valoresEspacio = pantalla.value.split(' ');
     valores.push(valoresEspacio[2])
+    valoresEspacio.splice(0,3);
+
+    //Según el valor encontrado en la posición 1 del array, realiza una operación.
     switch(valores[1]){
         case '+':
             resultado = parseFloat(valores[0]) + parseFloat(valores[2])
-            limpiarValores(resultado)
+            limpiarValores(resultado);
             break;
         case '-':
             resultado = parseFloat(valores[0]) - parseFloat(valores[2])
-            limpiarValores(resultado)
+            limpiarValores(resultado);
             break;
         case '/':
             resultado = parseFloat(valores[0]) / parseFloat(valores[2])
-            limpiarValores(resultado)
+            limpiarValores(resultado);
             break;
         case '*':
             resultado = parseFloat(valores[0]) * parseFloat(valores[2])
-            limpiarValores(resultado)
+            limpiarValores(resultado);
             break;
     }   
 }

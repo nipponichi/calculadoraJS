@@ -27,7 +27,7 @@ body {
   /*Pantalla calculadora*/
   .pantalla { 
     font-family: 'digital-7', sans-serif;
-    font-size: 50px;
+    font-size: 60px;
     background-color: black;
     box-shadow: inset 0px 0px 0px 2px white;
     border: 8px solid black;
@@ -169,10 +169,11 @@ body {
 
   /*Hover boton C*/
   .botonC:hover{
-    background-color:rgb(252, 138, 138);
+    background-color:rgb(249, 132, 132);
   }
 
   /*Diseño operadores*/
+  .botonPotencia,
   .operadorSum,
   .operadorRes,
   .operadorMul,
@@ -189,6 +190,7 @@ body {
   }
 
   /*Hover operadores*/
+  .botonPotencia:hover,
   .operadorSum:hover,
   .operadorRes:hover,
   .operadorMul:hover,
